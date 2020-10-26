@@ -1,0 +1,50 @@
+---
+layout: post
+title: "Books 2020"
+author: max
+categories: [ books ]
+image: assets/images/home.jpg
+tags: [2020]
+---
+<script src="../../assets/js/ag-grid-community.min.js"></script>
+
+<p>This is the pandemic year and also the year I decided to start my habit as a reader. At the beginning, my new
+    year commitment was to read a book every month, and eventhough some months I needed more time, the commitment
+    seems that is accomplish. </p>
+
+<div id="books-2020" class="ag-theme-alpine"></div>
+<script>
+    var columnDefs = [
+        { field: 'name' },
+        { field: 'author' },
+        { field: 'year', maxWidth: 90 },
+        { field: 'month', cellRenderer: 'monthCellRenderer' },
+        { field: 'pages', maxWidth: 100 },
+        { field: 'presentation' },
+    ];
+    var booksData = [
+        { name: "Mockingjay", author: "Suzanne Collins", year: "2010", month: 1, pages: "390", presentation: "paper" },
+        { name: "Fermat's enigma", author: "Singh Simon", year: "1998", month: 2, pages: "315", presentation: "paper" },
+    ];
+    var gridOptions = {
+        columnDefs: columnDefs,
+        defaultColDef: {
+            editable: true,
+            sortable: true,
+            flex: 1,
+            width: 170,
+            filter: true,
+            resizable: true
+        },
+        rowData: booksData,
+        components: {
+            'monthCellRenderer': MonthCellRenderer
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var gridDiv = document.querySelector('#books-2020');
+        new agGrid.Grid(gridDiv, gridOptions);
+
+    });
+</script>
