@@ -4,3 +4,12 @@
     width: 50vw;
 
 }
+
+@media (max-width : 770px) {
+    #books-2020
+    {
+        height: 50vh;
+        width: 92vw;
+    
+    }
+  }
