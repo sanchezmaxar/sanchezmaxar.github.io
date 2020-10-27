@@ -4,14 +4,14 @@ layout: default
 permalink: "/books.html"
 ---
 <div class="container">
-    <div class="row justify-content-center"> Here I share a little the books I have read and my review. Also I have my GoodRead profile.<a href="https://www.goodreads.com/user/show/119534042-max-armando">here</a> </div>
+    <div class="row justify-content-left" style="margin-bottom: 20px;"> Here I share a little the books I have read and my review. Also I have my GoodRead profile. <a href="https://www.goodreads.com/user/show/119534042-max-armando">here</a> </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Books</h1>
+        
             
         {% for category in site.categories %} 
         {% if category[0] =="books"%}
-        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ category[0] | downcase }}"><span>{{ category[0] }}</span></h4>
+        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ category[0] | downcase }}"><span>{{ category[0] }} posts</span></h4>
             
         {% assign pages_list = category[1] %}
         {% for post in pages_list %}
