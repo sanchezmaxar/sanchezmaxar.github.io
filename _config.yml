@@ -52,7 +52,12 @@ highlighter: rouge
 # Paginate
 paginate: 10
 
-# timezone: America/Mexico City
+timezone: America/Mexico City
+
+#Jekyll-Photo-Gallery Settings
+exiftag:
+ sources:
+   - images/Marquelia #Set to location of photos
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
