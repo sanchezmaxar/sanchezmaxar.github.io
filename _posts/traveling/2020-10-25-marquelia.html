@@ -5,19 +5,11 @@ author: max
 categories: [ traveling ]
 image: assets/images/Marquelia/sunrise.jpg
 tags: [2020]
-
 ---
 
 <p>On march of 2020 we went to Marquelia <a href="https://es.wikipedia.org/wiki/Municipio_de_Marquelia">link</a> to free
     turtles to the sea. This travel was so great and peaceful, so uncrowded that I had the opportunity to take a good
     picture of the night sky. Enjoy the gallery.
 <p>
-  <ul class="photo-gallery">
-    {% for image in site.static_files %}
-  {% if image.path contains 'assets/images/Marquelia' %}
-    <li><img src="{{ image.path }}" alt="{{ image.title}}" /></li>
-  {% endif %}
-{% endfor %}
-    {% for image in page.images %}
-    {% endfor %}
-</ul>
+ 
+{%include light-gallery-max.html galleryFolder="assets/images/Marquelia" galleryName="Marquelia"%}

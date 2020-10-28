@@ -11,12 +11,4 @@ tags: [2020]
     On march this year we went to Tecolutla <a href="https://en.wikipedia.org/wiki/Tecolutla">link</a> here we visited Tajin which is one of the biggest and unexplored ruins from the Veracruz culture.
 </p>
 
-<ul class="photo-gallery">
-    {% for image in site.static_files %}
-  {% if image.path contains 'assets/images/Tecolutla' %}
-    <li><img src="{{ image.path }}" alt="{{ image.title}}" /></li>
-  {% endif %}
-{% endfor %}
-    {% for image in page.images %}
-    {% endfor %}
-</ul>
+{%include light-gallery-max.html galleryFolder="assets/images/Tecolutla" galleryName="Tecolutla"%}
