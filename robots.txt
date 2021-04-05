@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://sanchezmaxar.github.io/sitemap.xml
+Host: https://sanchezmaxar.github.io
