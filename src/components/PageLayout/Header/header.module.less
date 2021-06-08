@@ -1,0 +1,105 @@
+@import (reference) '../../../styles/index.less';
+
+
+.content{
+    background: #fff;
+    border-radius: @border-radius-content;
+    margin: 0px;
+    min-height: 280px
+}
+.navWrap{
+    max-width: @body-width;
+    flex-direction: row-reverse;
+    flex-grow: 0;
+    ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+    }
+}
+.nav{
+    .flex-center();
+    background-color: #fff;
+    border-radius: 0 3rem 0 0;
+    color: #5F6F81;
+    font-weight: 500;
+    height: 4.35rem;
+    letter-spacing: .04rem;
+    margin-left: auto;
+    padding-top: 1rem;
+    padding-right: 2.5rem;
+    position: relative;
+    bottom: -.1px;
+    z-index: 1;
+    &:before {
+        content: '';
+        background-image: url(../../../images/nav-edge.svg);
+        height: 102.1%;
+        position: absolute;
+        top: 1px;
+        left: -133px;
+        width: 135px;
+        z-index: -1;
+    }
+    .navItem{
+        margin-right: .4rem;
+        a{
+            color: #5F6F81;
+            padding: .6rem 1rem;
+            text-transform: uppercase;
+        }
+        .anchorActive{
+            background-color: #304CFD;
+            border-radius: 14px;
+            color: #fff;
+        }
+    }
+    
+}
+/** mobile header code */
+.openMenu{
+    ul{
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: (50% - 5rem);
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        transition: all 2s;
+        li{
+            margin-bottom: 1rem;
+        }
+    }
+    .nav{
+        background-color: #304CFD;
+        &:before {
+            background-image: none;
+        }
+        .navItem{
+            a{
+                color: white;
+                font-size: 1.5rem;
+            }
+            .anchorActive{
+                background-color: #304CFD;
+                border-radius: 14px;
+                color: white
+            }
+        }
+    }
+    .backgroundDiv{
+        position: fixed;
+        background-color: #304CFD;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        right: 0;
+        top: 0;
+    }
+}
+.hidden{
+    @media screen and ( max-width:768px ) {
+        display: none;
+    }
+}
